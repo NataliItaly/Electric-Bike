@@ -29,7 +29,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid red; */
+   border: 1px solid red;
 }
 
 .logo {
@@ -72,6 +72,14 @@ ul {
   color: #ffffff;
 }
 
+.burger-menu {
+  width: 56px;
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+
 #first-screen {
   padding: 95px 0;
 }
@@ -82,13 +90,15 @@ ul {
 
 .main-title {
   font-weight: 700;
-  font-size: 64px;
+  font-size: calc(45px + 18 * (100vw / 1920));
+  /* font-size: 64px; */
   line-height: 77px;
   margin-bottom: 5px;
 }
 
 .subtitle {
   font-size: 32px;
+  font-size: calc(20px + 12 * (100vw / 1920));
   line-height: 39px;
   color: #6f6f6f;
   margin-bottom: 60px;
@@ -111,6 +121,7 @@ ul {
 }
 
 .btn {
+  display: block;
   width: 420px;
   height: 80px;
   background-color: #131313;
@@ -262,11 +273,12 @@ section {
 .details-term {
   float: left;
   clear: left;
-  width: 50%;
+  width: 47%;
   margin-bottom: 8px;
 }
 
 .details-block dd {
+  font-size: 13px;
   margin-bottom: 8px;
   opacity: 0.8;
 }
@@ -393,6 +405,10 @@ section {
 
 .order-slider {
   display: flex;
+}
+
+.order-slide {
+  width: 1130px;
 }
 
 .order-btns-wrapper {
