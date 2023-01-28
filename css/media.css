@@ -136,12 +136,35 @@
         width: 24%;
         background-size: contain;
         background-repeat: no-repeat;
+        margin-top: 7px;
     }
     .menu {
-        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #ff4040;
+        transform: translateY(-100%);
+    }
+    .menu.open {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .menu-link {
+        padding: 40px 10px;
+        font-size: 18px;
     }
     .burger-menu {
         display: block;
+    }
+    .menu-list {
+        flex-direction: column;
+        padding: 50px;
+    width: 100%;
+    }
+    .menu-list.open {
+        transform: translateY(0);
     }
     #first-screen .text-column {
         align-self: center;

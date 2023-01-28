@@ -29,7 +29,6 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-   border: 1px solid red;
 }
 
 .logo {
@@ -48,6 +47,7 @@ ul {
 
 .menu {
   margin-right: 85px;
+  transition: transform 0.4s ease-in;
 }
 
 .menu-list {
@@ -55,6 +55,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.4s ease-in;
 }
 
 .menu-link {
@@ -73,15 +74,66 @@ ul {
 }
 
 .burger-menu {
-  width: 56px;
+  width: 50px;
+  height: 35px;
   display: none;
   position: absolute;
-  top: 40px;
-  right: 60px;
+  top: 12px;
+  right: 15px;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #131313;
+  transition: all 0.4s ease-in;
+  transition-delay: 0.4s;
+}
+
+.bar:nth-of-type(1) {
+  top: 0;
+}
+
+.bar:nth-of-type(2) {
+  top: 16px;
+  }
+
+.bar:nth-of-type(3) {
+  bottom: 0;
+  }
+
+.burger-menu.open {
+  transform: rotate(-90deg);
+}
+
+.burger-menu.open .bar:nth-of-type(1) {
+  width: 10px;
+}
+
+.burger-menu.open .bar:nth-of-type(2) {
+  width: 50%;
+  }
+
+.burger-menu.open .bar:nth-of-type(3) {
+  width: 80%;
+  transition-delay: 0.4s;
 }
 
 #first-screen {
   padding: 95px 0;
+}
+
+.menu.open {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vh;
+  height: 100vh;
 }
 
 #first-screen .container {

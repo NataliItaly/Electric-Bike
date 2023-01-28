@@ -1,5 +1,20 @@
 //--------------- burger-menu ---------------
 
+const burgerMenu = document.querySelector('.burger-menu');
+const bars = document.querySelectorAll('.bar');
+const menu = document.querySelector('.menu');
+const menuList = document.querySelector('.menu-list');
+
+burgerMenu.addEventListener('click', function(event) {
+    menu.classList.toggle('open');
+    this.classList.toggle('open');
+});
+
+menu.addEventListener('click', function() {
+    burgerMenu.classList.toggle("open");
+    this.classList.toggle("open");
+});
+
 //https://codepen.io/hexagoncircle/pen/dJMERy
 
 //--------------- first-screen slide---------
